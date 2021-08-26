@@ -15,7 +15,7 @@ function App() {
       <Route exact path='/' component={CanvasSettingsPage} />
       <Route path='/canvas' component={CanvasPage} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

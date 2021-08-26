@@ -1,4 +1,25 @@
+body {
+  font-family: 'Poppins';
+  background-image: URL('./images/mikhail-selnihin-full-day-out-light-x4.jpg')
+}
+
+h1 {
+  font-weight: 600;
+}
+
 .canvas {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+  border: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.colorpicker {
+  margin: auto;
+  margin-top: 100px;
+}
+
+footer {
+  margin:auto;
 }
