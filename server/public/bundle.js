@@ -13,7 +13,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_colorful__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-colorful */ "./node_modules/react-colorful/dist/index.module.js");
+/* harmony import */ var react_colorful__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-colorful */ "./node_modules/react-colorful/dist/index.module.js");
+/* harmony import */ var _Pixel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pixel */ "./client/components/Pixel.jsx");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -29,19 +30,65 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function App() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("#aabbcc"),
       _useState2 = _slicedToArray(_useState, 2),
       color = _useState2[0],
       setColor = _useState2[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "PixArt is here")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_colorful__WEBPACK_IMPORTED_MODULE_1__.HexColorPicker, {
+  var pixelSize = 50; // temp value in px
+
+  var hexColor = '#0fa'; // temp value
+
+  var pixArr = [];
+
+  for (var i = 0; i < 64; i++) {
+    // temp 64 pix
+    pixArr.push(null);
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "PixArt is here")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_colorful__WEBPACK_IMPORTED_MODULE_2__.HexColorPicker, {
     color: color,
     onChange: setColor
-  }), ";");
+  }), pixArr.map(function (pix) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Pixel__WEBPACK_IMPORTED_MODULE_1__.default, {
+      width: "".concat(pixelSize),
+      height: "".concat(pixelSize),
+      backgroundColor: "".concat(hexColor)
+    });
+  }));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+
+/***/ }),
+
+/***/ "./client/components/Pixel.jsx":
+/*!*************************************!*\
+  !*** ./client/components/Pixel.jsx ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+var Pixel = function Pixel(props) {
+  var pixelProperties = {
+    width: props.width + 'px',
+    height: props.height + 'px',
+    backgroundColor: props.backgroundColor
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    style: pixelProperties
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Pixel);
 
 /***/ }),
 
