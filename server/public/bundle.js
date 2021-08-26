@@ -39,7 +39,7 @@ function App() {
 
   var pixelSize = 50; // temp value in px
 
-  var hexColor = '#0fa'; // temp value
+  var hexColor = "#0fa"; // temp value
 
   var canvasWidth = 8;
   var canvasHeight = 8; // canvas style
@@ -55,10 +55,7 @@ function App() {
     pixArr.push(null);
   }
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "PixArt is here")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_colorful__WEBPACK_IMPORTED_MODULE_2__.HexColorPicker, {
-    color: color,
-    onChange: setColor
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "PixArt is here")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "canvas",
     style: canvasStyle
   }, pixArr.map(function (pix) {
@@ -67,7 +64,11 @@ function App() {
       height: "".concat(pixelSize),
       backgroundColor: "".concat(hexColor)
     });
-  })));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_colorful__WEBPACK_IMPORTED_MODULE_2__.HexColorPicker, {
+    className: "colorpicker",
+    color: color,
+    onChange: setColor
+  }));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
