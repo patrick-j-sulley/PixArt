@@ -24,9 +24,11 @@ h1 {
   width: fit-content;
   margin-top: 50px;
   margin-bottom: 50px;
-  font-size: 4.5rem;
+  font-size: 5rem;
   border: 5px;
-  color: rgb(1, 42, 75);
+  color: rgb(15, 75, 153);
+  -webkit-text-stroke: 1px rgb(5, 63, 102);
+  text-shadow: 5px 5px 0px rgba(255, 255, 255, 0.19), 5px 5px 0px rgba(255, 254, 254, 0.23);
 }
 
 .settings {
@@ -36,6 +38,7 @@ h1 {
   background-color: aliceblue;
   padding: 20px;
   border-radius: 15px;
+  box-shadow: 0 20px 1px rgba(0, 0, 0, 0.19), 0 10px 10px rgba(0, 0, 0, 0.23);
 }
 
 .settings-form {
@@ -43,7 +46,7 @@ h1 {
 }
 
 .settings-form label{
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 15px;
 }
 
@@ -53,6 +56,8 @@ h1 {
   margin-bottom: 10px;
   margin-top: 5px;
   width:90%;
+  border-radius:10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .submit {
@@ -64,7 +69,7 @@ h1 {
   background-color: white;
   width: 100px;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
   border: 2px solid #4da3e9;
   border-radius: 30px;
   color: #4da3e9;
