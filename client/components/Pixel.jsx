@@ -12,7 +12,7 @@ const Pixel = (props) => {
     return {
       width: props.width + 'px',
       height: props.height + 'px',
-      backgroundColor: '#0fa'
+      backgroundColor: '#eee'
     }
   }
 
@@ -42,8 +42,7 @@ const Pixel = (props) => {
   // }
 
   return (
-    <div id={props.id} name={props.name} style={style} onClick={changeColour}></div>
-
+    <div id={props.id} name={props.name} style={style} onClick={changeColour} onDragEnter={changeColour}></div>
   )
 }
 

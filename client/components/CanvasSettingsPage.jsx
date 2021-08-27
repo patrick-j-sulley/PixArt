@@ -63,9 +63,9 @@ const CanvasSettingsPage = () => {
           />
         </div>
 
-        {/* <Link to='/canvas'> */}
+        <Link to='/canvas'>
         <button className="submit">Start!</button>
-        {/* </Link> */}
+        </Link>
       </form>
     </div>
   );

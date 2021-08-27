@@ -9,11 +9,11 @@ function CanvasPage() {
 
   const [color, setColor] = useState("#aabbcc");
 
-  const pixelSize = 50 // temp value in px
+  const pixelSize = 20 // temp value in px
   let hexColor = '#0fa' // temp value
 
-  const canvasWidth = 8
-  const canvasHeight = 8
+  const canvasWidth = 24
+  const canvasHeight = 18
 
   // canvas style
   const canvasStyle = {
@@ -47,10 +47,6 @@ function CanvasPage() {
 
   return (
     <>
-
-      <div>
-        <h1>PixArt is here</h1>
-      </div>
 
 
       <div className='canvas' style={canvasStyle}>
