@@ -145,9 +145,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var CanvasSettingsPage = function CanvasSettingsPage() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    canvasWidth: '',
-    canvasHeight: '',
-    pixelSize: ''
+    canvasWidth: "",
+    canvasHeight: "",
+    pixelSize: ""
   }),
       _useState2 = _slicedToArray(_useState, 2),
       settingsData = _useState2[0],
@@ -175,7 +175,11 @@ var CanvasSettingsPage = function CanvasSettingsPage() {
     className: "settings-form"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
     htmlFor: "canvasWIdth"
-  }, "Canvas Width"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+  }, "Canvas Width"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    "class": "highlight"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    "class": "bar"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     name: "canvasWidth",
     value: settingsData.width,
     onChange: handleChange,
@@ -184,7 +188,11 @@ var CanvasSettingsPage = function CanvasSettingsPage() {
     className: "settings-form"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
     htmlFor: "canvasHeight"
-  }, "Canvas Height"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+  }, "Canvas Height"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    "class": "highlight"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    "class": "bar"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     name: "canvasHeight",
     value: settingsData.height,
     onChange: handleChange,
@@ -193,7 +201,11 @@ var CanvasSettingsPage = function CanvasSettingsPage() {
     className: "settings-form"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
     htmlFor: "pixelSize"
-  }, "Pixel Size (px)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+  }, "Pixel Size(px)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    "class": "highlight"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    "class": "bar"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     name: "pixelSize",
     value: settingsData.pixelSize,
     onChange: handleChange,

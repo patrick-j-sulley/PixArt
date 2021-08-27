@@ -1,3 +1,8 @@
+@import "compass/css3";
+
+@import "compass/css3";
+@import "compass/reset";
+
 html {
   position: relative;
   min-height: 100%;
@@ -24,6 +29,63 @@ h1 {
   color: rgb(1, 42, 75);
 }
 
+.settings {
+  margin: auto;
+  width: fit-content;
+  text-align: center;
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.settings-form {
+
+}
+
+.settings-form label{
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.settings-form input{
+  text-align:center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width:90%;
+}
+
+.submit {
+  font-family: "PixelarRegularW01-Regular";
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 5px;
+  display: block;
+  background-color: white;
+  width: 100px;
+  margin: auto;
+  margin-top: 10px;
+  border: 2px solid #4da3e9;
+  border-radius: 30px;
+  color: #4da3e9;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  @include box-sizing(border-box);
+  @include transition(
+    background $trs-time,
+    color $trs-time,
+    font-size 0.05s,
+    width $trs-time,
+    border $trs-time
+  );
+}
+
+.submit:hover {
+  background: #4da3e9;
+  color: white;
+}
+
 .canvas {
   display: flex;
   flex-wrap: wrap;
@@ -41,10 +103,83 @@ footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 100px;
-  width: 50%;
+  height: fit-content;
+  width: fit-content;
   left: 840px;
   top: 890px;
   font-size: 1rem;
   color: rgb(85, 157, 238);
+}
+
+.settings-form input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+
+.settings-form input:focus 		{ outline:none; }
+
+.settings-form input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+.settings-form input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.settings-form input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
 }
