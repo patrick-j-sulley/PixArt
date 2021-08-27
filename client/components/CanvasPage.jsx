@@ -21,14 +21,16 @@ function CanvasPage() {
     height: canvasHeight * pixelSize
   }
 
-  const changeColor = () => {
-    console.log('pixel')
+  // const [pixelColor, changeColor] = useState()
 
-    // pixel = document.getElementById(id)
+  const changeColor = (id) => {
+    console.log(id)
 
-    // console.log(hexColor)
+    let pixel = document.getElementById(id)
+
+    console.log(pixel)
     
-    // hexColor = color
+    return color
    
     // console.log(pixel)
     // return canvas.forEach((pixel) => {
@@ -56,7 +58,7 @@ function CanvasPage() {
 
           pixArr.map(pix => {
             return (
-              <Pixel id={pix} width={`${pixelSize}`} height={`${pixelSize}`} name='pixel' backgroundColor={`${hexColor}`} changeColor={changeColor} />
+              <Pixel id={pix} width={`${pixelSize}`} height={`${pixelSize}`} name='pixel' backgroundColor={`${hexColor}`} clickPixel={(evt) => changeColor(evt.target.id)} />
             )
           })
         }
