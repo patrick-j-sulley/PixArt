@@ -33,23 +33,23 @@ const CanvasSettingsPage = () => {
   }
 
   return (
-    <div>
+    <div className='settings'>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='settings-form'>
           <label htmlFor='canvasWIdth'>Canvas Width</label>
           <input name='canvasWidth' value={settingsData.width} onChange={handleChange} type='text' />
         </div>
-        <div>
+        <div className='settings-form'>
           <label htmlFor='canvasHeight'>Canvas Height</label>
           <input name='canvasHeight' value={settingsData.height} onChange={handleChange} type='text' />
         </div>
-        <div>
+        <div className='settings-form'>
           <label htmlFor='pixelSize'>Pixel Size (px)</label>
           <input name='pixelSize' value={settingsData.pixelSize} onChange={handleChange} type='text' />
         </div>
 
         {/* <Link to='/canvas'> */}
-          <button>Start!</button>
+          <button className='submit'>Start!</button>
         {/* </Link> */}
       </form>
     </div>
