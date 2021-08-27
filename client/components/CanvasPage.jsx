@@ -4,9 +4,8 @@ import Pixel from './Pixel'
 import { ReactDOM } from 'react';
 
 
-var  canvas = document.getElementsByName('pixel')
 
-function App() {
+function CanvasPage() {
 
   const [color, setColor] = useState("#aabbcc");
 
@@ -18,16 +17,25 @@ function App() {
 
   // canvas style
   const canvasStyle = {
-    width : canvasWidth * pixelSize,
-    height : canvasHeight * pixelSize
+    width: canvasWidth * pixelSize,
+    height: canvasHeight * pixelSize
   }
 
   const changeColor = () => {
+    console.log('pixel')
+
+    // pixel = document.getElementById(id)
+
     // console.log(hexColor)
-    console.log(color)
-    console.log(canvas)
+    
     // hexColor = color
-    return canvas.forEach((pixel)=> pixel.backgroundColor = color)
+   
+    // console.log(pixel)
+    // return canvas.forEach((pixel) => {
+    //   pixel.backgroundColor = color
+    //   console.log(canvas.backgroundColor)
+    // }
+    // )
   }
 
   const pixArr = []
@@ -37,24 +45,25 @@ function App() {
 
   return (
     <>
-    
+
       <div>
         <h1>PixArt is here</h1>
       </div>
-      <HexColorPicker color={color} onChange={setColor} />
 
-      <div className='canvas' style={canvasStyle} onClick={changeColor}>
+
+      <div className='canvas' style={canvasStyle}>
         {
-          
+
           pixArr.map(pix => {
             return (
-              <Pixel id ={pix} width={`${pixelSize}`} height={`${pixelSize}`} name = 'pixel' backgroundColor={`${hexColor}`}  />
+              <Pixel id={pix} width={`${pixelSize}`} height={`${pixelSize}`} name='pixel' backgroundColor={`${hexColor}`} changeColor={changeColor} />
             )
           })
         }
       </div>
+      <HexColorPicker className='colorpicker' color={color} onChange={setColor} />
     </>
   )
 }
 
-export default App
+export default CanvasPage

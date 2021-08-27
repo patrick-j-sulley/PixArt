@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 
+
 const Pixel = (props) => {
+
+  // const changeColor = () => {
+  //   console.log(props.changeColor)
+  // }
+
   const pixelProperties = {
       // name : 'pixel',
       width : props.width + 'px',
@@ -9,7 +15,7 @@ const Pixel = (props) => {
   }
 
   return (
-    <div id={props.id} name = {props.name} style={pixelProperties}></div>
+    <div id={props.id} name = {props.name} style={pixelProperties} onClick={props.changeColor}></div>
   )
 }
 
