@@ -74,7 +74,7 @@ var CanvasPage = function CanvasPage() {
 
   var pixelSize = 50; // temp value in px
 
-  var hexColor = "#0fa"; // temp value
+  var hexColor = '#0fa'; // temp value
 
   var canvasWidth = 8;
   var canvasHeight = 8; // canvas style
@@ -90,10 +90,20 @@ var CanvasPage = function CanvasPage() {
     pixArr.push(null);
   }
 
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "canvas",
+    style: canvasStyle
+  }, pixArr.map(function (pix) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Pixel__WEBPACK_IMPORTED_MODULE_1__.default, {
+      width: "".concat(pixelSize),
+      height: "".concat(pixelSize),
+      backgroundColor: "".concat(hexColor)
+    });
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_colorful__WEBPACK_IMPORTED_MODULE_2__.HexColorPicker, {
+    className: "colorpicker",
     color: color,
     onChange: setColor
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "canvas",
+  }));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CanvasPage);

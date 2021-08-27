@@ -26,17 +26,18 @@ const CanvasPage = () => {
 
   return (
     <>
-      <HexColorPicker color={color} onChange={setColor} />
 
       <div className='canvas' style={canvasStyle}>
         {
           pixArr.map(pix => {
             return (
               <Pixel width={`${pixelSize}`} height={`${pixelSize}`} backgroundColor={`${hexColor}`} />
-            )
-          })
-        }
+              )
+            })
+          }
       </div>
+
+      <HexColorPicker className='colorpicker' color={color} onChange={setColor} />
     </>
   )
 }

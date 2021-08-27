@@ -1,10 +1,17 @@
 body {
   font-family: 'Poppins';
-  background-image: URL('./images/mikhail-selnihin-full-day-out-light-x4.jpg')
+  background-image: linear-gradient(rgba(127, 199, 204, 0.5),rgba(127, 199, 204, 0.5)) , URL('./images/mikhail-selnihin-full-day-out-light-x4.jpg')
 }
 
 h1 {
   font-weight: 600;
+  display:block;
+  margin: auto;
+  width:fit-content;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  border: 5px;
 }
 
 .canvas {
@@ -17,9 +24,14 @@ h1 {
 
 .colorpicker {
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 footer {
-  margin:auto;
+  position:fixed;
+  width:fit-content;
+  left: 825px;
+  top: 890px;
+  font-size: 0.8rem;
+  color:rgb(85, 157, 238);
 }
